@@ -20,7 +20,7 @@ This project was created to help users better understand:
 - Clean navigation layout
 
 ## Live Website
-[Click here to view the site (https://python648-web.github.io/CyberAware/))
+[Click here to view the site )
 
 ## Improvements
 - Add more research articles
