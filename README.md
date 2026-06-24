@@ -1,6 +1,6 @@
-# CyberAware 
+# R-CyberAware 
 
-CyberAware is a educational website focused on raising awareness about cybersecurity risks, digital divide and explore solutions.
+R-CyberAware is a educational website focused on raising awareness about cybersecurity risks, digital divide and explore solutions.
 
 ## Purpose
 This project was created to help users better understand:
