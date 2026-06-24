@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Digital Divide Project</title>
+    <meta name="description" content="CyberAware explores the digital dividem cybersecurity awareness, and AI accessibility.">
+    <meta name="author" content="Ridhina Mohan">
+    <link rel="icon" href="CyberAware%20white.png">
+    
+    <style>
+        /*Standardizes the spacing*/
+        * {
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /*This is the top half of the page*/
+        body{
+            font-family: Arial;
+            background-color: #f4f7fb;
+        }
+        h1{
+            color: white;
+
+            font-size: 72px;
+            font-weight: 800;
+            
+            line-height: 1.05;
+            
+            margin-bottom: 30px;
+            
+            text-shadow: 
+                0 10px 30px rgba(0,0,0,0.35);
+            
+            
+            
+        }
+        p{
+            text-align: center;
+            max-width: 900px;
+            margin:auto;
+        }
+        /**the paragraph insde the cards or boxes*/
+        .card p{
+            color: #555;
+            line-height: 1.6;
+            font-size:16px;
+        }
+        .hero-text{
+            color: #d6dbe4;
+            font-size: 22px;
+            line-height: 1.9;
+            max-width: 760px;
+            margin: auto;
+            
+            font-weight: 300;
+            margin-bottom: 40px;
+        }
+        
+        /*This button helps navigate the users to their desire
+        button{
+            display:block;
+            margin:auto;
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #64b5f6;
+            border: none;
+            border-radius: 10px;
+            
+            cursor: pointer;
+            transition: 0.3s;
+            
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        */
+        
+        /*upgrade the button into a navigation tool*/
+        .hero-button{
+            display: block;
+            width: fit-content;
+
+            margin: auto;
+            margin-top: 30px;
+
+            padding: 15px 30px;
+
+            background-color: #64b5f6;
+            color: #0d1b2a;
+
+            text-decoration: none;
+            font-size: 18px;
+
+            border-radius: 10px;
+
+            transition: 0.3s;
+
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+        /* hovering effect to the button 
+        button:hover{
+                background-color: white;
+                transform: scale(1.05);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        */
+        
+        /*upgrade hovring effect*/
+        .hero-button:hover{
+            background-color: white;
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(100,181,246,0.35);
+        }
+        /* second half of page */
+        section{
+            padding: 120px 40px;
+        
+        }
+        /*This creates space/breathing room for the text inside*/
+        section p{
+            font-size: 22px;
+            line-height: 1.8;
+            color: #333;
+        }
+        .section-divider{
+            width: 80px;
+            height: 4px;
+            
+            background-color: #64b5f6;
+            
+            margin: 0 auto 40px auto;
+            
+            border-radius: 10px;
+        }
+        section h2{
+            text-align: center;
+            font-size: 46px;
+            font-weight:700;
+            
+            margin-bottom: 20px;
+            
+            color: #0d1b2a;
+            letter-spacing: -1px;
+        }
+        /*the heading inside the cards or boxes*/
+        .card h3{
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #0d1b2a;
+            font-weight: 700;
+        }
+        
+        /* AI and society card */
+        .card-container{
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            flex-wrap: wrap;
+            
+            margin-top: 50px;
+        }
+        .container{
+            max-width: 1200px;
+            margin: auto;
+        }
+        .card::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(
+                90deg,
+                #1b263b,
+                #415a77
+            );
+            transform: scaleX(0);
+            transition: 0.3s;
+        }
+        .card{
+            background-color: white;
+            padding: 35px;
+            width: 320px;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            
+            border: 1px solid rgba(0,0,0,0.05);
+            
+            transition: transform 0.3s, box-shadow 0.3s;
+            
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+        }
+        .card:hover{
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            
+            border-color: #1b263b;
+        }
+        .card:hover::before{
+            transform:scaleX(1);
+        }
+        /*This is for the styling the image*/
+        .card img{
+            width: 85px;
+            margin-bottom: 25px;
+            transition: 0.3s;
+        }
+        .card:hover img{
+            transform: scale(1.08);
+        }
+        .article-button{
+            display: inline-block;
+            margin-top:20px;
+            padding: 10px 20px;
+            background-color: #0d1b2a;
+            color: white;
+            text-decoration: none;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+        .article-button:hover{
+            background-color: #64b5f6;
+            color: #0d1b2a;
+            transform: translateY(-2px);
+        }
+        /* hero section */
+        .hero{
+            height: 92vh;
+            
+            display:flex;
+            text-align: center;
+            
+            justify-content: center;
+            align-items: center;
+            
+            padding: 120px 40px;
+            
+            gap:60px;
+            background: linear-gradient(
+                rgba(13,27,42,0.82),
+                rgba(13,27,42,0.88)
+            ),
+            url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        } 
+        .hero-content{
+            max-width: 950px;
+        }
+        
+        /* This is the styling for nav/the navigation heading */
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 50px;
+            position: sticky;
+            top: 0;
+            background-color: rgba(13,27,42,0.9);
+            z-index: 1;
+            backdrop-filter: blur(10px);
+        }
+        ul{
+            display:flex;
+            list-style: none;
+            gap: 30px;
+        }
+        nav a{
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            
+            transition: 0.3s;
+            
+            position: relative;
+        }
+        nav a:after{
+            content:"";
+            
+            position: absolute;
+            
+            left: 0;
+            bottom: -6px;
+            
+            width: 0%;
+            height: 2px;
+            
+            background-color: #64b5f6;
+            transition: 0.3s;
+        }
+        nav a:hover{
+            color: #64b5f6;
+        }
+        nav a:hover:after{
+            width: 100%;
+        }
+        /* Responsive Design to make it adapt to the Screen size */
+        @media(max-width: 768px){
+            h1{
+                font-size: 40px;
+            }
+            
+            nav{
+                flex-direction: column;
+            }
+            
+            ul{
+                flex-direction: column;
+                text-align: center;
+                padding: 0;
+            }
+        }
+        /*this is to styple the footer*/
+        footer{
+            background-color: #08111f;
+
+            color: white;
+
+            padding: 70px 40px 30px;
+        }
+
+        .footer-content{
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(250px,1fr));
+
+            gap: 50px;
+        }
+
+        .footer-section h3{
+            margin-bottom: 20px;
+
+            font-size: 22px;
+
+            color: white;
+        }
+
+        .footer-section p{
+            color: #b8c4d6;
+
+            line-height: 1.8;
+
+            margin-bottom: 10px;
+
+            text-align: left;
+        }
+
+        .footer-section a{
+            display: block;
+
+            color: #b8c4d6;
+
+            text-decoration: none;
+
+            margin-bottom: 12px;
+
+            transition: 0.3s;
+        }
+
+        .footer-section a:hover{
+            color: #64b5f6;
+        }
+
+        .footer-bottom{
+            border-top:
+            1px solid rgba(255,255,255,0.08);
+
+            margin-top: 50px;
+
+            padding-top: 25px;
+
+            text-align: center;
+            
+            letter-spacing:0.5px;
+            opacity: 0.9;
+        }
+
+        .footer-bottom p{
+            color: #8fa1b8;
+
+            font-size: 14px;
+        }
+        /*This creates a smooth scrolling inside the website*/
+        html{
+            scroll-behavior: smooth;
+        }
+        
+        .research-section{
+            background-color: #f8f9fc;
+            border-top: 1px solid rgba(0,0,0,0.05);
+        }
+        .logo{
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            
+            letter-spacing: 1px;
+            
+            transition: 0.3s;
+        }
+        .logo:hover{
+            color: #64b5f6;
+            transform: scale(1.05);
+        }
+        .articles-section{
+            background-color: white;
+            border-top: 1px solid rgba(0,0,0,0.05);
+        }
+        #about{
+            background-color: white;
+        }
+        .logo{
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+        
+    
+    </style>
+</head>
+    <body>
+
+        
+    <!-- This is the class that has the smaller headings that helps navigate -->
+
+    <nav>
+        <img src="CyberAware white.png" class="logo" alt="CyberAware Logo">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        </nav>
+        
+    <!-- this is the class hero that contains the heading and the paragraph -->
+        <!-- basically divides it and combines it in one group -->
+    <div class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>Digital Divide & Cybersecurity</h1>
+
+        <p class="hero-text">
+            Exploring how technological access and cybersecurity awareness
+            impacts underserved communities in an AI-driven world.
+        </p>
+
+        <a href="#about" class="hero-button">
+            Learn More
+        </a>
+
+    </div>
+
+
+</div>
+        
+<!-- About section -->        
+        <section id="about">
+
+    <div class="container">
+
+        <h2>About the Project</h2>
+
+        <div class="section-divider"></div>
+
+        <p>
+            This project explores how limited access to technology affects underserved communities and how cybersecurity awareness can create safer digital platform use.
+        </p>
+
+    </div>
+
+</section>
+<!-- Research section -->        
+        <section class="research-section" id="research">
+            
+        <div class="container">
+            <h2>Research Topics</h2>
+            
+            <div class="card-container">
+                <!-- This section shows the research -->
+                <div class="card">
+                    <h3>Digital Divide</h3>
+                    <p>
+                        Exploring unequal access to technology and educational resources.
+                    </p>
+                </div>
+                
+                 <div class="card">
+                    <h3>Cybersecurity</h3>
+                    <p>
+                        Understanding digital safety and protecting vulnerable communities.
+                    </p>
+                </div>
+                
+                <div class="card">
+                    <h3>Artificial Intelligence</h3>
+                    <p>
+                        Researching how AI can improve accessibility and learning opportunities.
+                    </p>
+                </div>
+            </div>
+        </div>    
+        </section>
+        
+<!-- Research Articles Section -->        
+        <section class="articles-section" id="articles">
+        <div class="container">
+            <h2>Featured Research Articles</h2>
+            
+            <div class="card-container">
+                <!-- This section shows the research -->
+                <div class="card">
+                    <h3>The Digital Divide in Education</h3>
+                    <p>
+                        How unequal access to technology affects student success and learning opportunities.
+                    </p>
+                    <a href="articles.html" class="article-button">Read More</a>
+                </div>
+                
+                 <div class="card">
+                    <h3>Cybersecurity for Everyone</h3>
+                    <p>
+                        Uderstanding basic online safety pratices and learning how to stay protect online.
+                    </p>
+                     <a href="articles1.html" class="article-button">Read More</a>
+                </div>
+                
+                <div class="card">
+                    <h3>AI and the Future of Opportunity</h3>
+                    <p>
+                        Exploring how AI may help bridge educational gaps.
+                    </p>
+                    <a href="articles2.html" class="article-button">Read More</a>
+                </div>
+            </div>
+        </div>
+        </section>
+        
+        <section id="contact">
+            <div class="container">
+                <h2>Contact</h2>
+                <div class="section-divider"></div>
+                <p>
+                    Interested in cybersecurity and digital equity?
+                </p>
+            </div>
+        </section>
+              
+        <!-- footer for the website -->
+        <footer>
+
+    <div class="footer-content">
+
+        <div class="footer-section">
+            <h3>CyberAware</h3>
+
+            <p>
+                A student-led project exploring technology,
+                cybersecurity, AI, and digital inequality.
+            </p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+
+            <a href="#about">About</a>
+            <a href="#research">Research</a>
+            <a href="#articles">Articles</a>
+        </div>
+
+        <div class="footer-section">
+            <h3>Topics</h3>
+
+            <p>Digital Divide</p>
+            <p>Cybersecurity</p>
+            <p>Artificial Intelligence</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>
+            © 2026 CyberAware | Created by Ridhina Mohan | Digital Divide & Cybersecurity Project
+        </p>
+    </div>
+
+</footer>
+        
+    </body>
+</html>
